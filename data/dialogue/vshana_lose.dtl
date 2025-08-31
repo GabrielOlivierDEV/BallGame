@@ -1,0 +1,10 @@
+hana: I WON! HAHAHAHAHAHAHA! #id:3e
+hana: HAHAHA! YOU'RE TERRIBLE! #id:3f
+join hana
+hana: Looks like I get to choose the movie now! #id:40
+join haruka
+haruka: ... #id:41
+- Restart #id:42
+	[signal arg="reload"]
+- Quit #id:43
+	[signal arg="return_to_menu"]

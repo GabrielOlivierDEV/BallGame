@@ -1,0 +1,29 @@
+join haruka center
+haruka: Well well... #id:44
+update haruka
+haruka: HAHAHAHAHAHAHAHAHAHAH! #id:45
+join hana center
+haruka: Hohoho, foxgirl... You're the... #id:46
+haruka: WORST "BALL-PLAYER" #id:47
+haruka: OF ALL TIME! #id:48
+hana: ...hmp, you’re just saying that because I'm a girl... #id:49
+haruka: How does that have anything to do with it? #id:4a
+haruka: Looks like I'm going to pick some action movies... #id:4b
+haruka: Old ones... very... very old ones, hehe... #id:4c
+hana: GOSH NO! YOU HAVE A TERRIBLE TASTE! #id:4d
+haruka: Much better than your stupid romantic vampire movies! #id:4e
+hana: Don’t talk crap about my husband! #id:4f
+haruka: As if he existed... #id:50
+hana: ... #id:51
+hana: What did you just say? #id:52
+haruka: ... #id:53
+haruka: Whatever, you choose... #id:54
+hana: WHAT? #id:55
+hana: HEHEHEHE! #id:56
+hana: You might regret this, Haru! #id:57
+haruka: I think I'm already regretting... #id:58
+leave --All-- [animation="Fade Out" length="2.0"]
+[wait time="2.0"]
+[background arg="res://data/assets/black.jpg" fade="2.0"]
+[wait time="2.0"]
+[signal arg="end"]

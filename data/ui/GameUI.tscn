@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://bs4bfquyn488l"]
+
+[ext_resource type="PackedScene" uid="uid://c1kfh74cau2tj" path="res://data/ui/Pause.tscn" id="2_ur3v1"]
+[ext_resource type="Script" uid="uid://km3snepkg32i" path="res://data/scripts/UI/press_skip.gd" id="3_rdgti"]
+[ext_resource type="Texture2D" uid="uid://y6fkpxipwqvd" path="res://data/assets/buttons/skip.png" id="4_12ud8"]
+[ext_resource type="Script" uid="uid://c3kqbsp6ki3hh" path="res://data/scripts/UI/fade_in.gd" id="7_h2x3y"]
+
+[node name="GameUI" type="CanvasLayer"]
+layer = 4
+
+[node name="Skip" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.509804)
+offset_left = 1127.0
+offset_top = 34.0
+offset_right = 1435.0
+offset_bottom = 342.0
+scale = Vector2(0.31, 0.31)
+icon = ExtResource("4_12ud8")
+script = ExtResource("3_rdgti")
+
+[node name="f12" type="Label" parent="Skip"]
+layout_mode = 0
+offset_left = 83.8712
+offset_top = 190.323
+offset_right = 217.871
+offset_bottom = 300.323
+theme_override_font_sizes/font_size = 80
+text = "F12"
+
+[node name="Pause" parent="." instance=ExtResource("2_ur3v1")]
+
+[node name="black" type="ColorRect" parent="."]
+visible = false
+offset_right = 1281.0
+offset_bottom = 727.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("7_h2x3y")
+
+[connection signal="pressed" from="Skip" to="Skip" method="_on_pressed"]
