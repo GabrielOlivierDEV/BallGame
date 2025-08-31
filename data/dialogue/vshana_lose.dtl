@@ -5,4 +5,4 @@ haruka: ... #id:41
 - Restart #id:42
 	[signal arg="reload"]
 - Quit #id:43
-	[signal arg="return_to_menu"]
+	[signal arg="quit"]

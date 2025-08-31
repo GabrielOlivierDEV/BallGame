@@ -33,6 +33,9 @@ const PADDLE_SPEED: int = 500
 # Debug configuration
 @export var debug_enabled: bool = true  # Set 'false' to disable debug
 
+# Adjust AI difficulty
+@export var hard_mode: bool = false
+
 # Debug cheat code (Asmodex sequence)
 var asmodex_code := [
 	"interact", "ui_up", "ui_up", "ui_down", "ui_down", 
@@ -49,6 +52,13 @@ func _ready() -> void:
 	haruka_icon.visible = false
 	ball.visible = false
 	Dialogic.signal_event.connect(_on_dialogic_signal)
+
+func _process(_delta: float) -> void:
+	# Adjust AI difficulty
+	if hard_mode == true:
+		cpu.reaction_delay = 0.04  # Faster reaction, harder AI
+	else:
+		cpu.reaction_delay = 0.2   # Slower reaction, easier AI
 
 func _input(event: InputEvent) -> void:
 	# Debug input listener (only works if debug_enabled = true)

@@ -35,14 +35,23 @@ func _on_dialogic_signal(argument: String):
 		# Show the game when dialog says to start
 		game.visible = true
 	if argument == "reload":
-		# Reload the current scene
+		# Reload the game
 		call_deferred("reload")
-	if argument == "end":
-		# Quit the game
-		call_deferred("end")
-	if argument == "return_to_menu":
-		# Quits the game (for now)
+	if argument == "quit":
+		# Quits the game
 		call_deferred("quit")
+	if argument == "infinite":
+		# Enable infinite mode
+		infinite_mode = true
+	if argument == "finite":
+		# Disable infinite mode
+		infinite_mode = false
+	if argument == "hard":
+		# Enable harder AI
+		game.hard_mode = true
+	if argument == "easy":
+		# Disable harder AI
+		game.hard_mode = false
 
 func win_lose():
 	# Make sure this function only runs if the game is visible
@@ -70,10 +79,6 @@ func win_lose():
 func reload():
 	# Reload the current scene (used for restarting the match)
 	get_tree().reload_current_scene()
-
-func end():
-	# Close the game entirely
-	get_tree().quit()
 
 func quit():
 	# Same as end() - exits the game
