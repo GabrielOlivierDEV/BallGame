@@ -1,7 +1,7 @@
 # 🎮 BallGame
 
 BallGame is a **Pong clone** developed in **Godot 4**, created as a learning project for programming and game design.  
-It features characters from my webcomic **Haruka the Demon Boy**.
+It features characters from my webcomic [Haruka the Demon Boy](https://www.webtoons.com/en/canvas/haruka-the-demon-boy-eng/list?title_no=954452).
 
 ---
 
