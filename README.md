@@ -22,9 +22,9 @@ It features characters from my webcomic [Haruka the Demon Boy](https://www.webto
 
 The following music tracks are used in **BallGame** and are all **public domain / free to use** from [OpenGameArt.org](https://opengameart.org):
 
-- **"Talking Cute"** by Alex McCulloch / Pro Sensory – used during gameplay  
-- **"Bossa Nova"** by Joth – used in the pause menu  
-- **"Furniture Shop"** by SkyleTheFrench – used in the end screen
+- ["Talking Cute"](https://opengameart.org/content/talking-cute-chiptune) by Alex McCulloch / Pro Sensory – used during gameplay  
+- ["Bossa Nova"](https://opengameart.org/content/bossa-nova) by Joth – used in the pause menu  
+- ["Furniture Shop"](https://opengameart.org/content/furniture-shop) by SkyleTheFrench – used in the end screen
 
 ## 📝 License
 
