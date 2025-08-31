@@ -1,4 +1,0 @@
-[wait time="1.0"]
-hana: Take it easy please. #id:59
-[signal arg="start_game"]
-[signal arg="easy"]

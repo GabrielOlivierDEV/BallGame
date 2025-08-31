@@ -14,7 +14,7 @@ config/name="BallGame"
 config/version="1.0"
 run/main_scene="uid://c28in4fseue3t"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://dauwar66qyd1"
 
 [autoload]
 
@@ -28,8 +28,8 @@ directories/dch_directory={
 "haruka": "res://data/characters/haruka.dch"
 }
 directories/dtl_directory={
-"vs_hana_start": "res://data/dialogue/vs_hana_start.dtl",
 "vshana_lose": "res://data/dialogue/vshana_lose.dtl",
+"vshana_start": "res://data/dialogue/vshana_start.dtl",
 "vshana_win": "res://data/dialogue/vshana_win.dtl"
 }
 

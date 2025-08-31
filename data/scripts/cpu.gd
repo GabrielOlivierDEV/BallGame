@@ -11,6 +11,7 @@ var time_since_update: float = 0.0 # Elapsed time since the last target position
 var target_pos: Vector2            # Target position that the paddle aims to move towards
 
 var enable = true                  # If false, paddle is disabled and hidden
+@export var hard_mode = false          # Faster AI. 
 
 func _ready() -> void:
 	# Get the screen height
@@ -22,17 +23,11 @@ func _ready() -> void:
 	# Initialize target position with the paddle’s initial position
 	target_pos = position  
 	
-	# Connects to Dialogic signals to adjust AI difficulty dynamically
-	Dialogic.signal_event.connect(_on_dialogic_signal)
-
-
-func _on_dialogic_signal(argument: String):
-	# Adjust AI difficulty based on the event signal received
-	if argument == "hard":
+	# Adjust AI difficulty
+	if hard_mode == false:
 		reaction_delay = 0.04  # Faster reaction, harder AI
-	if argument == "easy":
+	else:
 		reaction_delay = 0.2   # Slower reaction, easier AI
-
 
 func _process(delta: float) -> void:
 	if enable:

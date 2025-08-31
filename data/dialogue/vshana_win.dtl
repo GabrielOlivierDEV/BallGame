@@ -1,27 +1,22 @@
-join haruka center
-haruka: Well well... #id:44
-update haruka
-haruka: HAHAHAHAHAHAHAHAHAHAH! #id:45
-join hana center
-haruka: Hohoho, foxgirl... You're the... #id:46
-haruka: WORST "BALL-PLAYER" #id:47
+haruka: Well, well… #id:44
+haruka: HAHAHAHAHAHAH! #id:45
+haruka: Hohoho… foxgirl, you’re the… #id:46
+haruka: absolute worst *ball-player* #id:47
 haruka: OF ALL TIME! #id:48
-hana: ...hmp, you’re just saying that because I'm a girl... #id:49
-haruka: How does that have anything to do with it? #id:4a
-haruka: Looks like I'm going to pick some action movies... #id:4b
-haruka: Old ones... very... very old ones, hehe... #id:4c
-hana: GOSH NO! YOU HAVE A TERRIBLE TASTE! #id:4d
-haruka: Much better than your stupid romantic vampire movies! #id:4e
-hana: Don’t talk crap about my husband! #id:4f
-haruka: As if he existed... #id:50
-hana: ... #id:51
-hana: What did you just say? #id:52
-haruka: ... #id:53
-haruka: Whatever, you choose... #id:54
-hana: WHAT? #id:55
-hana: HEHEHEHE! #id:56
-hana: You might regret this, Haru! #id:57
-haruka: I think I'm already regretting... #id:58
+hana: Input lag. #id:49
+haruka: Looks like I might have to pick… maybe [insert bad movie of current year]. #id:4b
+hana: STOP PICKING THE BAD ONES WHEN YOU ALREADY KNOW IT'S BAD, YOU BRAINROTTED MUTT! #id:4d
+haruka: I just want to see how terrible it really is. #id:4e
+haruka: Still better than watching your silly k-dramas on repeat. Like that one with the-- #id:4f
+hana: Slow down! Don’t you dare trash-talk my husband! #id:4g
+haruka: As if he even knew you… #id:50
+hana: … #id:51
+haruka: … #id:53
+haruka: Fine, whatever. Your pick. #id:54
+hana: WHAT?! #id:55
+hana: Heh… you might regret this, Haru! #id:56
+haruka: Probably… #id:57
+
 leave --All-- [animation="Fade Out" length="2.0"]
 [wait time="2.0"]
 [background arg="res://data/assets/black.jpg" fade="2.0"]

@@ -10,12 +10,15 @@ extends Node2D
 @onready var CRT = $CRT
 @onready var GameUI = $GameUI
 
+# Infinite mode
+@export var infinite_mode = false
+
 func _ready() -> void:
 	# Play background music for the battle
 	GameBattle.play()
 	
 	# Start the opening dialog
-	Dialogic.start("vs_hana_start")
+	Dialogic.start("vshana_start")
 	
 	# Hide screens and game until triggered by dialog
 	lose.visible = false
@@ -44,6 +47,10 @@ func _on_dialogic_signal(argument: String):
 func win_lose():
 	# Make sure this function only runs if the game is visible
 	if not game.visible:
+		return
+	
+	# Continue the game if "infinite_mode" is enabled
+	if infinite_mode:
 		return
 	
 	# Check if CPU wins (score[1] >= 3)
