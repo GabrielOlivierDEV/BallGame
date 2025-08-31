@@ -10,13 +10,13 @@ It features characters from my webcomic [Haruka the Demon Boy](https://www.webto
 - Code commented with the help of **ChatGPT** for clarity and learning purposes  
 
 ## How to Play / Run the Game
-- 1. Clone the repository:
+- Clone the repository:
    ```bash
    git clone https://github.com/GabrielOlivierDEV/BallGame.git
 
-- 2. Open the project in Godot 4
-- 3. Run the main scene
-- 4. Enjoy the game!
+- Open the project in Godot 4
+- Run the main scene
+- Enjoy!
 
 ## 🎵 Music Credits
 
