@@ -15,8 +15,8 @@ It features characters from my webcomic [Haruka the Demon Boy](https://www.webto
    git clone https://github.com/GabrielOlivierDEV/BallGame.git
 
 2. Open the project in Godot 4
-    Run the main scene
-    Enjoy the game!
+   -Run the main scene
+   -Enjoy the game!
 
 ## 🎵 Music Credits
 
