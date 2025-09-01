@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="BallGame"
-config/version="1.2"
-run/main_scene="uid://c28in4fseue3t"
+config/version="1.2.1"
+run/main_scene="uid://cqjjh8su4gcj5"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="uid://dauwar66qyd1"
 
