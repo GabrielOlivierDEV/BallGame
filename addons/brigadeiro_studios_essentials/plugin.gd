@@ -1,9 +1,6 @@
 @tool
 extends EditorPlugin
 
-const SLOT_STATE_NAME := "SlotState"
-const SLOT_STATE_PATH := "res://addons/brigadeiro_studios_essentials/SlotState.gd"
-
 const LOADING_SERVICE_NAME := "LoadingService"
 const LOADING_SERVICE_PATH := "res://addons/brigadeiro_studios_essentials/LoadingService.gd"
 
@@ -11,11 +8,9 @@ const GLOBALDATA_NAME := "GlobalData"
 const ACHIEVEMENTS_PATH := "res://addons/brigadeiro_studios_essentials/savedata/global_data.gd"
 
 func _enter_tree():
-	_add_autoload(SLOT_STATE_NAME, SLOT_STATE_PATH)
 	_add_autoload(LOADING_SERVICE_NAME, LOADING_SERVICE_PATH)
 
 func _exit_tree():
-	_remove_autoload(SLOT_STATE_NAME)
 	_remove_autoload(LOADING_SERVICE_NAME)
 
 func _add_autoload(name: String, path: String) -> void:
