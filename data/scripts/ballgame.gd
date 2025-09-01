@@ -13,34 +13,34 @@ const PADDLE_SPEED: int = 500
 @onready var glitch = $Glitch
 
 # Character icons
-@onready var icons = $Icons
-@onready var hana_icon = $Icons/HanaIcon
-@onready var haruka_icon = $Icons/HarukaIcon
+@onready var hana_icon = $CPUScore/HanaIcon
+@onready var haruka_icon = $PlayerScore/HarukaIcon
 
 # Timers
 @onready var ball_timer = $BallTimer
 
 # Score UI
-@onready var player_score = $PlayerScore
-@onready var cpu_score = $CPUScore
+@onready var player_score = $PlayerScore/Label
+@onready var cpu_score = $CPUScore/Label
 @onready var score_right = $ScoreRight
 @onready var score_left = $ScoreLeft
 @onready var player_point = $player_point
 @onready var cpu_point = $cpu_point
+@onready var cheat = $Player/Cheat
 
 # Other game elements
 @onready var win = $win
 
 # Debug configuration
-@export var debug_enabled: bool = true  # Set 'false' to disable debug
+@export var debug_enabled: bool = false  # Set 'false' to disable debug
 
 # Adjust AI difficulty
 @export var hard_mode: bool = false
 
 # Debug cheat code (Asmodex sequence)
 var asmodex_code := [
-	"interact", "ui_up", "ui_up", "ui_down", "ui_down", 
-	"ui_left", "ui_right", "ui_left", "ui_right", "ui_down"
+	"interact", "move_up", "move_up", "move_down", "move_down", 
+	"move_left", "move_right", "move_left", "move_right", "move_down"
 ]
 var input_sequence := []
 
@@ -49,6 +49,7 @@ var input_sequence := []
 # ----------------------------
 
 func _ready() -> void:
+	cheat.visible = false
 	glitch.visible = false
 	hana_icon.visible = false
 	haruka_icon.visible = false
@@ -79,6 +80,15 @@ func _input(event: InputEvent) -> void:
 		cpu.glitched = true
 		glitch.queue_free()
 
+	if event.is_action_pressed("debug"):
+		# Activate debug mode
+		if not cheat:
+			return
+		debug_enabled = true
+		cheat.visible = true
+		await get_tree().create_timer(30.0).timeout
+		cheat.queue_free()
+
 # Retrieves the name of the pressed action (if it belongs to the Asmodex code)
 func _get_action_from_event(_event: InputEventKey) -> String:
 	for action in asmodex_code:
@@ -106,6 +116,10 @@ func _debug_give_points() -> void:
 		get_parent().win_lose()
 		ball_timer.start()
 		input_sequence.clear()
+		if not cheat:
+			return
+		if cheat.visible == true:
+			cheat.queue_free()
 
 # ----------------------------
 #       PLAYER MOVEMENT
