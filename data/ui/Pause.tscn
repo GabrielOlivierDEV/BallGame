@@ -93,7 +93,7 @@ theme_override_font_sizes/font_size = 50
 text = "Restart"
 metadata/_edit_lock_ = true
 
-[node name="Save and Quit" type="Button" parent="Menu/PauseMenu"]
+[node name="Quit" type="Button" parent="Menu/PauseMenu"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.290196, 0.290196, 0.290196, 1)
 theme_override_constants/outline_size = 15
@@ -127,5 +127,5 @@ parameters/looping = true
 
 [connection signal="pressed" from="Menu/PauseMenu/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="Menu/PauseMenu/Restart" to="." method="_on_restart_pressed"]
-[connection signal="pressed" from="Menu/PauseMenu/Save and Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Menu/PauseMenu/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Press_Pause" to="." method="_on_press_pause_pressed"]

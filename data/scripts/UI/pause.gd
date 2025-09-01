@@ -17,6 +17,7 @@ extends Control
 @onready var display_version = $Menu/GameVersion
 @onready var press_pause = $Press_Pause
 @onready var music = $Music
+@onready var quit_button = $Menu/PauseMenu/Quit
 
 # ------------------------------
 # VARIABLES (Project settings / version info)
@@ -30,6 +31,9 @@ func _ready() -> void:
 	press_pause.icon = normal_texture
 	display_version.text = "BALLGAME " + version
 	menu.visible = false
+	match OS.get_name():
+		"Web":
+			quit_button.visible = false
 
 # ------------------------------
 # PAUSE SYSTEM (Pause and Resume handling)

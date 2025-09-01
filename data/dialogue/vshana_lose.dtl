@@ -4,5 +4,3 @@ hana: Looks like I get to choose the movie now! #id:40
 haruka: ... #id:41
 - Restart #id:42
 	[signal arg="reload"]
-- Quit #id:43
-	[signal arg="quit"]

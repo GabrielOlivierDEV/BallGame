@@ -16,8 +16,6 @@ haruka: Fine, whatever. Your pick. #id:54
 hana: WHAT?! #id:55
 hana: Heh… you might regret this, Haru! #id:56
 haruka: Probably… #id:57
-
-leave --All-- [animation="Fade Out" length="2.0"]
 [wait time="2.0"]
 [background arg="res://data/assets/black.jpg" fade="2.0"]
 [wait time="2.0"]
