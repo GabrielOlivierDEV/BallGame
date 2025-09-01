@@ -52,6 +52,9 @@ func _on_dialogic_signal(argument: String):
 	if argument == "easy":
 		# Disable harder AI
 		game.hard_mode = false
+	if argument == "multiplayer":
+		# Enable multiplayer (makes CPU paddle playable)
+		game.player_two()
 
 func win_lose():
 	# Make sure this function only runs if the game is visible

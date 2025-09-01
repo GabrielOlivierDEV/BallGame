@@ -9,8 +9,8 @@ var p_width: float   # Paddle width
 var p_height: float  # Paddle height
 
 # Control states
-var glitched = false   # If true, paddle can also move horizontally
-var enable = true      # If true, player input is enabled
+@export var glitched = false   # If true, paddle can also move horizontally
+@export var enable = true      # If true, player input is enabled
 
 func _ready() -> void:
 	# Get the size of the viewport (game window)
@@ -24,28 +24,28 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if enable:
+		# Keep paddle inside the screen bounds
+		# Clamping ensures it never goes off-screen
+		position.y = clamp(position.y, p_height * 0.5, win_height - (p_height * 0.5))
+		position.x = clamp(position.x, p_width * 0.5, win_width - (p_width * 0.5))
+		
 		# Try to get the paddle speed from the parent node
 		var paddle_speed = get_parent().get("PADDLE_SPEED") if get_parent().has_method("get") else null
 		if paddle_speed == null:
 			return  # Prevents errors if PADDLE_SPEED does not exist
 
 		# Vertical movement (normal behavior)
-		if Input.is_action_pressed("ui_up"):
+		if Input.is_action_pressed("move_up"):
 			position.y -= paddle_speed * delta  # Move up
-		if Input.is_action_pressed("ui_down"):
+		if Input.is_action_pressed("move_down"):
 			position.y += paddle_speed * delta  # Move down
 
 		# Extra horizontal movement (only when glitched mode is active)
 		if glitched:
-			if Input.is_action_pressed("ui_right"):
+			if Input.is_action_pressed("move_right"):
 				position.x += paddle_speed * delta  # Move right
-			if Input.is_action_pressed("ui_left"):
+			if Input.is_action_pressed("move_left"):
 				position.x -= paddle_speed * delta  # Move left
-
-		# Keep paddle inside the screen bounds
-		# Clamping ensures it never goes off-screen
-		position.y = clamp(position.y, p_height * 0.5, win_height - (p_height * 0.5))
-		position.x = clamp(position.x, p_width * 0.5, win_width - (p_width * 0.5))
 
 	if not enable:
 		# If input is disabled, do nothing

@@ -3,11 +3,15 @@ haruka: Whoever scores 3 points in *BallGame* gets to pick the movie tonight!
 hana: You're a snake, trying to use this buggy game to your advantage?
 hana: Bet you're planning some glitchy trick to win.
 haruka: Nah, I'm going clean.
-Select Difficulty.
-- Easy Mode
-	[signal arg="easy"]
-- Hard Mode
-	[signal arg="hard"]
+Select Mode.
+- Singleplayer
+	Select Difficulty.
+	- Easy Mode
+		[signal arg="easy"]
+	- Hard Mode
+		[signal arg="hard"]
+- Multiplayer
+	[signal arg="multiplayer"]
 Select Mode.
 - Finite
 	[signal arg="finite"]

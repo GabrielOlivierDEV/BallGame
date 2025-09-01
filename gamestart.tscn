@@ -24,9 +24,11 @@ script = ExtResource("1_bl5ip")
 [node name="GameBattle" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_e62hc")
 volume_db = -5.0
+parameters/looping = true
 
 [node name="End" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_w6ecy")
+parameters/looping = true
 
 [node name="CRT" type="CanvasLayer" parent="."]
 

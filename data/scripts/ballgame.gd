@@ -10,6 +10,7 @@ const PADDLE_SPEED: int = 500
 @onready var cpu = $CPU
 @onready var ball = $Ball
 @onready var borders = $Borders
+@onready var glitch = $Glitch
 
 # Character icons
 @onready var icons = $Icons
@@ -48,6 +49,7 @@ var input_sequence := []
 # ----------------------------
 
 func _ready() -> void:
+	glitch.visible = false
 	hana_icon.visible = false
 	haruka_icon.visible = false
 	ball.visible = false
@@ -67,6 +69,15 @@ func _input(event: InputEvent) -> void:
 		if action_name:
 			_update_input_sequence(action_name)
 			_check_asmodex_code()
+	if event.is_action_pressed("glitch"):
+		# Activate glitch mode
+		if not glitch:
+			return
+		glitch.visible = true
+		await get_tree().create_timer(2.0).timeout
+		player.glitched = true
+		cpu.glitched = true
+		glitch.queue_free()
 
 # Retrieves the name of the pressed action (if it belongs to the Asmodex code)
 func _get_action_from_event(_event: InputEventKey) -> String:
@@ -95,6 +106,14 @@ func _debug_give_points() -> void:
 		get_parent().win_lose()
 		ball_timer.start()
 		input_sequence.clear()
+
+# ----------------------------
+#       PLAYER MOVEMENT
+# ----------------------------
+
+# Makes the CPU paddle playable
+func player_two():
+	cpu.playable = true
 
 # ----------------------------
 #       SCORE MANAGEMENT
