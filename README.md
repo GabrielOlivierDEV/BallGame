@@ -1,4 +1,4 @@
-# 🎮 BallGame
+# 🎾 BallGame
 
 BallGame is a **Pong clone** developed in **Godot 4**, created as a learning project for my programming and game design journey.  
 It features characters from my webcomic [Haruka the Demon Boy](https://www.webtoons.com/en/canvas/haruka-the-demon-boy-eng/list?title_no=954452).
@@ -21,7 +21,7 @@ It features characters from my webcomic [Haruka the Demon Boy](https://www.webto
 - Enjoy!
 
 
-## 🎮 Gameplay & Features
+## 🎮 Gameplay & Features 🎮
 
 - **Modes**  
   - **Finite Mode**: First to score 3 points wins.  
@@ -42,7 +42,7 @@ It features characters from my webcomic [Haruka the Demon Boy](https://www.webto
   - **Fullscreen**: Press `F12`  
 
 
-## 🎵 Music Credits
+## 🎵 Music Credits 🎵
 
 The following music tracks are used in **BallGame** and are all **public domain / free to use** from [OpenGameArt.org](https://opengameart.org):
 
@@ -51,7 +51,7 @@ The following music tracks are used in **BallGame** and are all **public domain 
 - ["Furniture Shop"](https://opengameart.org/content/furniture-shop) by SkyleTheFrench – used in the end screen
 
 
-## 📝 License
+## 📝 License ⚖
 
 **BallGame** is an open-source project. You are free to use, modify, and distribute the **code** under the terms of the [MIT License](https://opensource.org/licenses/MIT).  
 
