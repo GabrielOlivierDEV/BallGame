@@ -57,10 +57,9 @@ The following music tracks are used in **BallGame** and are all **public domain 
 
 **Important notes:**
 
-- The **characters and visual assets** in the game (from *Haruka the Demon Boy/Haruka the Chaotic Boy*) are the original creations of the author and **cannot be used or redistributed without permission**.  
+- The **all visual assets remain copyrighted by the creator** (from *Haruka the Demon Boy/Haruka the Chaotic Boy*) and **cannot be used or redistributed without permission**.  
 - The **music tracks** included in the game are from [OpenGameArt.org](https://opengameart.org) and are **public domain / free to use**.  
 - The game uses the [Dialogic](https://github.com/dialogic-godot/dialogic) dialogue plugin, which is open-source and free to use under its own license.
-- While the **code is open-source**, all visual assets remain copyrighted by the creator.
 - More licenses inside the "licenses" folder.
 
 
