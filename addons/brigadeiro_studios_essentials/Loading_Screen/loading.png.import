@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://y6fkpxipwqvd"
-path="res://.godot/imported/skip.png-586048fd0d7df9976eee73a51564a910.ctex"
+uid="uid://3gpk1astbkue"
+path="res://.godot/imported/loading.png-e4ba5183194bcee62b57a39258888d2b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/assets/buttons/skip.png"
-dest_files=["res://.godot/imported/skip.png-586048fd0d7df9976eee73a51564a910.ctex"]
+source_file="res://addons/brigadeiro_studios_essentials/Loading_Screen/loading.png"
+dest_files=["res://.godot/imported/loading.png-e4ba5183194bcee62b57a39258888d2b.ctex"]
 
 [params]
 

@@ -1,10 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://dl7tj6y2pdhc4"]
+[gd_scene load_steps=11 format=3 uid="uid://dl7tj6y2pdhc4"]
 
 [ext_resource type="Script" uid="uid://26mqrg7q4rmw" path="res://addons/brigadeiro_studios_essentials/Loading_Screen/loading_screen.gd" id="1_7jpe2"]
-[ext_resource type="Texture2D" uid="uid://dl8p86q8eokq6" path="res://addons/brigadeiro_studios_essentials/Loading_Screen/assets/black_screen.jpg" id="2_7jpe2"]
 [ext_resource type="Shader" uid="uid://68yudi7bsh56" path="res://data/shaders/screen_effect.gdshader" id="3_s683f"]
 [ext_resource type="FontFile" uid="uid://d2i5eycr72nvi" path="res://data/fonts/Pixelify_Sans/PixelifySans-Regular.ttf" id="4_5iwjd"]
-[ext_resource type="Texture2D" uid="uid://3gpk1astbkue" path="res://addons/brigadeiro_studios_essentials/Loading_Screen/assets/loading.png" id="5_7jpe2"]
+[ext_resource type="Texture2D" uid="uid://3gpk1astbkue" path="res://addons/brigadeiro_studios_essentials/Loading_Screen/loading.png" id="5_7jpe2"]
 [ext_resource type="FontFile" uid="uid://dsjkyl3jkaamm" path="res://data/fonts/PublicPixel-rv0pA.ttf" id="6_8a2qb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1gwab"]
@@ -45,10 +44,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7jpe2")
 
-[node name="Blackground" type="Sprite2D" parent="."]
+[node name="Blackground" type="ColorRect" parent="."]
 modulate = Color(1, 1, 1, 0.843137)
-position = Vector2(640, 360)
-texture = ExtResource("2_7jpe2")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0

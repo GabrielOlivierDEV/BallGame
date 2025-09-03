@@ -84,5 +84,5 @@ func reload():
 	get_tree().reload_current_scene()
 
 func quit():
-	# Same as end() - exits the game
+	# exits the game
 	get_tree().quit()

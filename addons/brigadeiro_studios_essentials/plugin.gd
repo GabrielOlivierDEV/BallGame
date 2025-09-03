@@ -4,9 +4,6 @@ extends EditorPlugin
 const LOADING_SERVICE_NAME := "LoadingService"
 const LOADING_SERVICE_PATH := "res://addons/brigadeiro_studios_essentials/LoadingService.gd"
 
-const GLOBALDATA_NAME := "GlobalData"
-const ACHIEVEMENTS_PATH := "res://addons/brigadeiro_studios_essentials/savedata/global_data.gd"
-
 func _enter_tree():
 	_add_autoload(LOADING_SERVICE_NAME, LOADING_SERVICE_PATH)
 
