@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://c28in4fseue3t"]
 
 [ext_resource type="Script" uid="uid://3aittphvvicc" path="res://data/scripts/(vs_hana).gd" id="1_isvum"]
-[ext_resource type="AudioStream" uid="uid://c675dux7kpuvr" path="res://data/music/TalkingCuteChiptune.mp3" id="2_chwoo"]
+[ext_resource type="AudioStream" uid="uid://bgig07vtwuaj1" path="res://data/music/TalkingCuteChiptune.ogg" id="2_isvum"]
 [ext_resource type="AudioStream" uid="uid://dxls4gcx5xcbk" path="res://data/music/furniture_shop_loop.ogg" id="3_ikdmv"]
 [ext_resource type="Shader" uid="uid://68yudi7bsh56" path="res://data/shaders/screen_effect.gdshader" id="4_ryyg2"]
 [ext_resource type="Texture2D" uid="uid://bqqpck1dr1o4q" path="res://data/assets/asmodex.png" id="5_ltr6w"]
@@ -22,7 +22,7 @@ center_offset = Vector3(640, 360, 0)
 script = ExtResource("1_isvum")
 
 [node name="GameBattle" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_chwoo")
+stream = ExtResource("2_isvum")
 volume_db = -5.0
 parameters/looping = true
 

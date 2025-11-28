@@ -87,7 +87,8 @@ func _input(event: InputEvent) -> void:
 		debug_enabled = true
 		cheat.visible = true
 		await get_tree().create_timer(30.0).timeout
-		cheat.queue_free()
+		if cheat:
+			cheat.queue_free()
 
 # Retrieves the name of the pressed action (if it belongs to the Asmodex code)
 func _get_action_from_event(_event: InputEventKey) -> String:

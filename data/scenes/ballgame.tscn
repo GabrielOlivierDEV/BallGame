@@ -194,9 +194,11 @@ shape = SubResource("RectangleShape2D_j7cwk")
 [node name="Cheat" type="Label" parent="Player"]
 visible = false
 offset_left = -42.0
-offset_top = -370.0
+offset_top = -317.0
 offset_right = 83.0
-offset_bottom = -87.0
+offset_bottom = -94.0
+theme_override_constants/line_spacing = -3
+theme_override_constants/outline_size = 9
 theme_override_fonts/font = ExtResource("9_ckvvl")
 theme_override_font_sizes/font_size = 18
 text = "E
