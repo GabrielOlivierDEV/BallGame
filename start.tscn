@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://cqjjh8su4gcj5"]
+[gd_scene load_steps=2 format=3 uid="uid://bxn6pgnnkjtj"]
 
-[ext_resource type="Script" uid="uid://qrnthkh1r6u3" path="res://data/scripts/start.gd" id="1_ots34"]
+[sub_resource type="GDScript" id="GDScript_1svla"]
+script/source = "extends Node2D
+
+const MAIN_SCREEN_SCENE = \"res://data/scenes/main_screen.tscn\"
+
+func _ready() -> void:
+	LoadingService.change_scene(MAIN_SCREEN_SCENE)
+"
 
 [node name="Start" type="Node2D"]
-script = ExtResource("1_ots34")
+script = SubResource("GDScript_1svla")

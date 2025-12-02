@@ -1,6 +1,6 @@
-hana: I WON! HAHAHAHAHAHAHA! #id:3e
-hana: HAHAHA! YOU SUCK! #id:3f
-hana: Looks like I get to choose the movie now! #id:40
-haruka: ... #id:41
-- Restart #id:42
+hana: "I WON! HAHAHAHAHAHAHA!"
+hana: "HAHAHA! YOU SUCK!"
+hana: "Looks like I get to choose the movie now!"
+haruka: "..."
+- Restart
 	[signal arg="reload"]

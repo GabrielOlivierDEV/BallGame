@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://c1kfh74cau2tj"]
 
-[ext_resource type="Script" uid="uid://cm7ju1j4opact" path="res://data/scripts/UI/pause.gd" id="1_xksx4"]
-[ext_resource type="FontFile" uid="uid://dsjkyl3jkaamm" path="res://data/fonts/PublicPixel-rv0pA.ttf" id="2_8gqci"]
-[ext_resource type="Texture2D" uid="uid://ctfiak8yse0hv" path="res://data/assets/buttons/pause.png" id="3_luuqn"]
-[ext_resource type="FontFile" uid="uid://d2i5eycr72nvi" path="res://data/fonts/Pixelify_Sans/PixelifySans-Regular.ttf" id="3_q86b6"]
+[ext_resource type="Script" uid="uid://cm7ju1j4opact" path="res://data/scripts/pause.gd" id="1_xksx4"]
+[ext_resource type="FontFile" uid="uid://dsjkyl3jkaamm" path="res://data/fonts/public_pixel.ttf" id="2_8gqci"]
+[ext_resource type="Texture2D" uid="uid://ctfiak8yse0hv" path="res://data/assets/pause_button.png" id="3_luuqn"]
+[ext_resource type="FontFile" uid="uid://d2i5eycr72nvi" path="res://data/fonts/pixelify_sans_regular.ttf" id="3_q86b6"]
 [ext_resource type="Shader" uid="uid://ce3kwe0580svo" path="res://data/shaders/checkboard.gdshader" id="4_ofr6j"]
-[ext_resource type="Texture2D" uid="uid://07u53bf6f5tx" path="res://data/assets/buttons/pause_pressed.png" id="5_3he8r"]
-[ext_resource type="AudioStream" uid="uid://dwwfc2srbl1xx" path="res://data/music/8bit Bossa.ogg" id="8_ofr6j"]
+[ext_resource type="Texture2D" uid="uid://07u53bf6f5tx" path="res://data/assets/pause_pressed.png" id="5_3he8r"]
+[ext_resource type="AudioStream" uid="uid://dwwfc2srbl1xx" path="res://data/music/8bit_bossa.ogg" id="8_ofr6j"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0o46q"]
 shader = ExtResource("4_ofr6j")
@@ -29,11 +29,9 @@ pressed_texture = ExtResource("5_3he8r")
 
 [node name="Menu" type="Control" parent="."]
 visible = false
-layout_mode = 3
 anchors_preset = 0
 
 [node name="background" type="Control" parent="Menu"]
-layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0

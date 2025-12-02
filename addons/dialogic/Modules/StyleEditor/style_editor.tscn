@@ -1,10 +1,10 @@
 [gd_scene load_steps=16 format=3 uid="uid://cx6h3tck10s1g"]
 
-[ext_resource type="Script" uid="uid://ddnbd3o37ok2e" path="res://addons/dialogic/Modules/StyleEditor/style_editor.gd" id="1_gy14f"]
+[ext_resource type="Script" uid="uid://n7kjhd6h41ec" path="res://addons/dialogic/Modules/StyleEditor/style_editor.gd" id="1_gy14f"]
 [ext_resource type="PackedScene" uid="uid://dbpkta2tjsqim" path="res://addons/dialogic/Editor/Common/hint_tooltip_icon.tscn" id="2_g4mnt"]
-[ext_resource type="Script" uid="uid://uhlu06fkihd4" path="res://addons/dialogic/Modules/StyleEditor/style_layer_editor.gd" id="3_iih7c"]
-[ext_resource type="Script" uid="uid://by62aixjrbi0a" path="res://addons/dialogic/Modules/StyleEditor/Components/style_layer_tree.gd" id="4_kpoqn"]
-[ext_resource type="Script" uid="uid://de0a8nq3gihwa" path="res://addons/dialogic/Modules/StyleEditor/Components/style_browser_window.gd" id="5_qbwx0"]
+[ext_resource type="Script" uid="uid://5j2ryc3uk1x3" path="res://addons/dialogic/Modules/StyleEditor/style_layer_editor.gd" id="3_iih7c"]
+[ext_resource type="Script" uid="uid://orsplfberna" path="res://addons/dialogic/Modules/StyleEditor/Components/style_layer_tree.gd" id="4_kpoqn"]
+[ext_resource type="Script" uid="uid://i2qxk6l78uax" path="res://addons/dialogic/Modules/StyleEditor/Components/style_browser_window.gd" id="5_qbwx0"]
 [ext_resource type="PackedScene" uid="uid://cs381i3h7sveq" path="res://addons/dialogic/Modules/StyleEditor/Components/style_browser.tscn" id="6_p6lia"]
 
 [sub_resource type="Image" id="Image_3rxjh"]

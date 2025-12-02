@@ -1,0 +1,359 @@
+[gd_scene load_steps=29 format=3 uid="uid://bp1iudr8g6t4q"]
+
+[ext_resource type="Script" uid="uid://c5ysccrgett43" path="res://data/scripts/ball_game.gd" id="1_5j1dg"]
+[ext_resource type="Texture2D" uid="uid://cajraihkhw4f8" path="res://data/assets/bg.png" id="1_yasd4"]
+[ext_resource type="Shader" uid="uid://dt7v6hoe7mr4o" path="res://data/shaders/glitch.gdshader" id="2_lno2w"]
+[ext_resource type="Texture2D" uid="uid://bcvadc68cfcnw" path="res://data/assets/hana_icon.png" id="3_it05p"]
+[ext_resource type="Texture2D" uid="uid://bvb58lu3v4dv8" path="res://data/assets/haruka_icon.png" id="3_jwuxe"]
+[ext_resource type="Script" uid="uid://dqg1nu6gtvw" path="res://data/scripts/player.gd" id="3_m8rgr"]
+[ext_resource type="Script" uid="uid://dhiwkqawvth0x" path="res://data/scripts/ball.gd" id="4_ikv3j"]
+[ext_resource type="Script" uid="uid://dvoakwjq1yau7" path="res://data/scripts/cpu.gd" id="7_7j71k"]
+[ext_resource type="Texture2D" uid="uid://bdi20kdwp3ey6" path="res://data/assets/ghost.png" id="8_boya4"]
+[ext_resource type="FontFile" uid="uid://d2i5eycr72nvi" path="res://data/fonts/pixelify_sans_regular.ttf" id="9_ckvvl"]
+[ext_resource type="FontFile" uid="uid://dsjkyl3jkaamm" path="res://data/fonts/public_pixel.ttf" id="9_ruxix"]
+[ext_resource type="AudioStream" uid="uid://bui5ghb2oif2n" path="res://data/sfx/ball_game_win.ogg" id="12_4eq12"]
+[ext_resource type="AudioStream" uid="uid://7yjm0seohmej" path="res://data/sfx/player_point.ogg" id="13_xlaem"]
+[ext_resource type="AudioStream" uid="uid://dn21j1w0ei8s3" path="res://data/sfx/cpu_point.ogg" id="14_n23oj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d26x6"]
+shader = ExtResource("2_lno2w")
+shader_parameter/shake_power = 0.03
+shader_parameter/shake_rate = 0.2
+shader_parameter/shake_speed = 5.0
+shader_parameter/shake_block_size = 30.5
+shader_parameter/shake_color_rate = 0.01
+
+[sub_resource type="QuadMesh" id="QuadMesh_kg2qg"]
+size = Vector2(1280, 720)
+center_offset = Vector3(640, 360, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3q8ny"]
+size = Vector2(34, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_scpg0"]
+size = Vector2(69, 85)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j7cwk"]
+size = Vector2(227.216, 206.402)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qnthr"]
+size = Vector2(159.75, 73)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2spne"]
+size = Vector2(54, 832)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iaakd"]
+size = Vector2(159.75, 74)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dppnd"]
+size = Vector2(53, 832)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xexbj"]
+size = Vector2(161, 74)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8r8ds"]
+size = Vector2(159.75, 73)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d0ard"]
+size = Vector2(1280, 56)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uf15b"]
+size = Vector2(33, 776)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v5wjk"]
+size = Vector2(2, 18)
+
+[node name="BallGame" type="Node2D"]
+script = ExtResource("1_5j1dg")
+
+[node name="Glitch" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Glitch"]
+modulate = Color(0, 0, 0, 0.635294)
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.412152, 0.412152, 0.412152, 1)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Glitch"]
+material = SubResource("ShaderMaterial_d26x6")
+mesh = SubResource("QuadMesh_kg2qg")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_yasd4")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Ball" type="CharacterBody2D" parent="." groups=["ball"]]
+position = Vector2(640, 360)
+collision_mask = 3
+script = ExtResource("4_ikv3j")
+
+[node name="ColorRect2" type="ColorRect" parent="Ball"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -18.0
+offset_right = 10.0
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect3" type="ColorRect" parent="Ball"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -17.0
+offset_top = -9.0
+offset_right = 17.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Ball"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = -13.0
+offset_right = 15.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_3q8ny")
+metadata/_edit_lock_ = true
+
+[node name="Press" type="Label" parent="Ball"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -374.0
+offset_top = 239.0
+offset_right = 426.0
+offset_bottom = 289.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("9_ruxix")
+theme_override_font_sizes/font_size = 50
+text = "Press E to START"
+horizontal_alignment = 1
+
+[node name="CPU" type="CharacterBody2D" parent="."]
+position = Vector2(1123, 360)
+script = ExtResource("7_7j71k")
+
+[node name="Sprite2D" type="Sprite2D" parent="CPU"]
+position = Vector2(20, 0)
+scale = Vector2(0.367491, 0.409395)
+texture = ExtResource("8_boya4")
+flip_h = true
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CPU"]
+position = Vector2(19.5, 41.5)
+shape = SubResource("RectangleShape2D_scpg0")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CPU"]
+position = Vector2(19.5, -43)
+scale = Vector2(0.367491, 0.409395)
+shape = SubResource("RectangleShape2D_j7cwk")
+metadata/_edit_lock_ = true
+
+[node name="Player" type="CharacterBody2D" parent="." groups=["player"]]
+position = Vector2(116, 360)
+script = ExtResource("3_m8rgr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+position = Vector2(21, 5.36442e-07)
+scale = Vector2(0.367491, 0.409395)
+texture = ExtResource("8_boya4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(20.5, 41)
+shape = SubResource("RectangleShape2D_scpg0")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player"]
+position = Vector2(20.75, -43.25)
+scale = Vector2(0.367491, 0.409395)
+shape = SubResource("RectangleShape2D_j7cwk")
+
+[node name="Cheat" type="Label" parent="Player"]
+visible = false
+offset_left = -42.0
+offset_top = -317.0
+offset_right = 83.0
+offset_bottom = -94.0
+theme_override_constants/line_spacing = -3
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("9_ckvvl")
+theme_override_font_sizes/font_size = 18
+text = "E
++
+UP + UP
++
+DOWN + DOWN
++
+LEFT + RIGHT
++
+LEFT + RIGHT
++
+ DOWN"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ScoreRight" type="Area2D" parent="."]
+
+[node name="Up" type="CollisionShape2D" parent="ScoreRight"]
+position = Vector2(1199.88, -19.5)
+shape = SubResource("RectangleShape2D_qnthr")
+
+[node name="Right" type="CollisionShape2D" parent="ScoreRight"]
+position = Vector2(1287, 360)
+shape = SubResource("RectangleShape2D_2spne")
+
+[node name="Down" type="CollisionShape2D" parent="ScoreRight"]
+position = Vector2(1199.88, 739)
+shape = SubResource("RectangleShape2D_iaakd")
+
+[node name="Spawn" type="Marker2D" parent="ScoreRight"]
+position = Vector2(137, 317)
+
+[node name="ScoreLeft" type="Area2D" parent="."]
+position = Vector2(872, 446)
+metadata/_edit_lock_ = true
+
+[node name="Left" type="CollisionShape2D" parent="ScoreLeft"]
+position = Vector2(-878.5, -86)
+shape = SubResource("RectangleShape2D_dppnd")
+
+[node name="Down" type="CollisionShape2D" parent="ScoreLeft"]
+position = Vector2(-791.5, 293)
+shape = SubResource("RectangleShape2D_xexbj")
+
+[node name="Up" type="CollisionShape2D" parent="ScoreLeft"]
+position = Vector2(-791.875, -465.5)
+shape = SubResource("RectangleShape2D_8r8ds")
+
+[node name="Borders" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="up" type="CollisionShape2D" parent="Borders"]
+position = Vector2(640.25, -28)
+shape = SubResource("RectangleShape2D_d0ard")
+
+[node name="down" type="CollisionShape2D" parent="Borders"]
+position = Vector2(640, 748)
+shape = SubResource("RectangleShape2D_d0ard")
+
+[node name="left" type="CollisionShape2D" parent="Borders"]
+position = Vector2(-16.5, 388)
+shape = SubResource("RectangleShape2D_uf15b")
+
+[node name="right" type="CollisionShape2D" parent="Borders"]
+position = Vector2(1297, 388)
+shape = SubResource("RectangleShape2D_uf15b")
+
+[node name="trave_left_up" type="CollisionShape2D" parent="Borders"]
+position = Vector2(161, 8)
+shape = SubResource("RectangleShape2D_v5wjk")
+
+[node name="trave_left_down" type="CollisionShape2D" parent="Borders"]
+position = Vector2(162, 711)
+shape = SubResource("RectangleShape2D_v5wjk")
+
+[node name="trave_right_up" type="CollisionShape2D" parent="Borders"]
+position = Vector2(1119, 8)
+shape = SubResource("RectangleShape2D_v5wjk")
+
+[node name="trave_right_down" type="CollisionShape2D" parent="Borders"]
+position = Vector2(1119, 711)
+shape = SubResource("RectangleShape2D_v5wjk")
+
+[node name="win" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_4eq12")
+volume_db = 15.0
+
+[node name="player_point" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_xlaem")
+volume_db = 15.0
+
+[node name="cpu_point" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_n23oj")
+volume_db = 15.0
+
+[node name="BallTimer" type="Timer" parent="."]
+wait_time = 2.1
+one_shot = true
+autostart = true
+
+[node name="CPUScore" type="HBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 658.0
+offset_top = 1.0
+offset_right = 1256.0
+offset_bottom = 137.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HanaIcon" type="Button" parent="CPUScore"]
+layout_mode = 2
+icon = ExtResource("3_it05p")
+flat = true
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="CPUScore"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ruxix")
+theme_override_font_sizes/font_size = 80
+text = "0"
+metadata/_edit_lock_ = true
+
+[node name="PlayerScore" type="HBoxContainer" parent="."]
+layout_direction = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -622.0
+offset_top = 1.0
+offset_right = -29.0
+offset_bottom = 137.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HarukaIcon" type="Button" parent="PlayerScore"]
+layout_mode = 2
+icon = ExtResource("3_jwuxe")
+flat = true
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="PlayerScore"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ruxix")
+theme_override_font_sizes/font_size = 80
+text = "0"
+metadata/_edit_lock_ = true
+
+[connection signal="body_entered" from="ScoreRight" to="." method="_on_score_right_body_entered"]
+[connection signal="body_entered" from="ScoreRight" to="ScoreRight" method="_on_body_entered"]
+[connection signal="body_entered" from="ScoreLeft" to="." method="_on_score_left_body_entered"]
+[connection signal="timeout" from="BallTimer" to="." method="_on_ball_timer_timeout"]

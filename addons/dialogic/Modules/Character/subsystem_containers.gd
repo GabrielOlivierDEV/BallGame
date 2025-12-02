@@ -182,6 +182,7 @@ func resize_container(container: DialogicNode_PortraitContainer, rect_size: Vari
 			tween.finished.connect(save_position_container.bind(container))
 	else:
 		container.position = container.position + relative_position_change
+		#container.size = final_rect_resize
 		container.set_deferred("size", final_rect_resize)
 		save_position_container(container)
 
