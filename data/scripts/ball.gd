@@ -21,6 +21,7 @@ var disable_e : bool = false       # Prevents multiple ball spawns
 # NODES
 # ------------------------------
 @onready var press = $Press        # "Press" UI node
+@onready var click = %Click
 
 # ------------------------------
 # BUILT-IN FUNCTIONS
@@ -35,6 +36,7 @@ func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("interact") and disable_e == false:
 		if Dialogic.current_timeline == null:
 			new_ball()
+			click.play()
 			press.visible = false
 			disable_e = true
 

@@ -9,6 +9,7 @@ extends Node2D
 @onready var End = $End
 @onready var CRT = $CRT
 @onready var GameUI = $GameUI
+@onready var click = %Click
 
 # Infinite mode
 @export var infinite_mode = false
@@ -36,25 +37,36 @@ func _on_dialogic_signal(argument: String):
 		game.visible = true
 	if argument == "reload":
 		# Reload the game
+		click.play()
 		call_deferred("reload")
 	if argument == "quit":
 		# Quits the game
+		click.play()
 		call_deferred("quit")
 	if argument == "infinite":
 		# Enable infinite mode
+		click.play()
 		infinite_mode = true
 	if argument == "finite":
 		# Disable infinite mode
+		click.play()
 		infinite_mode = false
 	if argument == "hard":
 		# Enable harder AI
+		click.play()
 		game.hard_mode = true
 	if argument == "easy":
 		# Disable harder AI
+		click.play()
 		game.hard_mode = false
 	if argument == "multiplayer":
 		# Enable multiplayer (makes CPU paddle playable)
+		click.play()
 		game.player_two()
+		
+	if argument == "singleplayer":
+		# Maintain the game in singleplayer mode.
+		click.play()
 
 func win_lose():
 	# Make sure this function only runs if the game is visible

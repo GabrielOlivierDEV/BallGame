@@ -42,13 +42,14 @@ It features characters from my webcomic [Haruka the Demon Boy](https://www.webto
   - **Fullscreen**: Press `F12`  
 
 
-## 🎵 Music Credits 🎵
+## 🎵 Music and SFX Credits 🎵
 
-The following music tracks are used in **BallGame** and are all **public domain / free to use** from [OpenGameArt.org](https://opengameart.org):
+The following audio are used in **BallGame** and are all from [OpenGameArt.org](https://opengameart.org):
 
 - ["Talking Cute"](https://opengameart.org/content/talking-cute-chiptune) by Alex McCulloch / Pro Sensory – used during gameplay  
 - ["Bossa Nova"](https://opengameart.org/content/bossa-nova) by Joth – used in the pause menu  
 - ["Furniture Shop"](https://opengameart.org/content/furniture-shop) by SkyleTheFrench – used in the end screen
+- ["Menu Selection Click"](https://opengameart.org/content/menu-selection-click) by NenadSimic – used in the UI elements
 
 
 ## 📝 License ⚖
@@ -61,5 +62,3 @@ The following music tracks are used in **BallGame** and are all **public domain 
 - The **music tracks** included in the game are from [OpenGameArt.org](https://opengameart.org) and are **public domain / free to use**.  
 - The game uses the [Dialogic](https://github.com/dialogic-godot/dialogic) dialogue plugin, which is open-source and free to use under its own license.
 - More licenses inside the "licenses" folder.
-
-

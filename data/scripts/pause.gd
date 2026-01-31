@@ -18,6 +18,7 @@ extends Control
 @onready var press_pause = $PressPause
 @onready var music = $Music
 @onready var quit_button = $Menu/PauseMenu/Quit
+@onready var click = %Click
 
 # ------------------------------
 # VARIABLES (Project settings / version info)
@@ -45,12 +46,16 @@ func toggle_pause() -> void:
 		pause()
 
 func pause() -> void:
+	if click:
+		click.play()
 	press_pause.icon = pressed_texture
 	get_tree().paused = true
 	menu.visible = true
 	music.play()
 
 func resume() -> void:
+	if click:
+		click.play()
 	press_pause.icon = normal_texture
 	get_tree().paused = false
 	menu.visible = false
@@ -72,6 +77,9 @@ func _on_resume_pressed() -> void:
 func _on_restart_pressed() -> void:
 	get_tree().paused = false
 	
+	if click:
+		click.play()
+	
 	# End current Dialogic timeline if running
 	if dialogic:
 		dialogic.end_timeline()
@@ -83,6 +91,9 @@ func _on_restart_pressed() -> void:
 func _on_quit_pressed() -> void:
 	get_tree().paused = false
 	
+	if click:
+		click.play()
+		
 	# End Dialogic timeline if one is active
 	if dialogic and dialogic.current_timeline:
 		dialogic.end_timeline()

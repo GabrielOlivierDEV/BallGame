@@ -1,16 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://bs4bfquyn488l"]
+[gd_scene format=3 uid="uid://bs4bfquyn488l"]
 
 [ext_resource type="PackedScene" uid="uid://c1kfh74cau2tj" path="res://data/ui/pause.tscn" id="2_ur3v1"]
 [ext_resource type="Script" uid="uid://c3kqbsp6ki3hh" path="res://data/scripts/fade_in.gd" id="7_h2x3y"]
 
-[node name="GameUI" type="CanvasLayer"]
+[node name="GameUI" type="CanvasLayer" unique_id=886385618]
 layer = 4
 
-[node name="Pause" parent="." instance=ExtResource("2_ur3v1")]
-
-[node name="black" type="ColorRect" parent="."]
+[node name="black" type="ColorRect" parent="." unique_id=1538189983]
 visible = false
 offset_right = 1281.0
 offset_bottom = 727.0
 color = Color(0, 0, 0, 1)
 script = ExtResource("7_h2x3y")
+
+[node name="Pause" parent="." unique_id=1121213577 instance=ExtResource("2_ur3v1")]

@@ -5,6 +5,7 @@ hana: "Bet you're planning some glitchy trick to win."
 haruka: "Nah, I'm going clean."
 Select Mode.
 - Singleplayer
+	[signal arg="singleplayer"]
 	Select Difficulty.
 	- Easy Mode
 		[signal arg="easy"]

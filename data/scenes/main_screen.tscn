@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://c28in4fseue3t"]
+[gd_scene format=3 uid="uid://c28in4fseue3t"]
 
 [ext_resource type="Script" uid="uid://3aittphvvicc" path="res://data/scripts/main_screen.gd" id="1_rd226"]
 [ext_resource type="AudioStream" uid="uid://bgig07vtwuaj1" path="res://data/music/talking_cute_chiptune.ogg" id="2_mfk66"]
 [ext_resource type="AudioStream" uid="uid://dxls4gcx5xcbk" path="res://data/music/furniture_shop_loop.ogg" id="3_54dh5"]
 [ext_resource type="Shader" uid="uid://68yudi7bsh56" path="res://data/shaders/crt_effect.gdshader" id="4_ccuut"]
+[ext_resource type="AudioStream" uid="uid://bifm1da2kye66" path="res://data/sfx/menu_selection_click.wav" id="4_mfk66"]
 [ext_resource type="Texture2D" uid="uid://bqqpck1dr1o4q" path="res://data/assets/asmodex.png" id="5_guntq"]
 [ext_resource type="Texture2D" uid="uid://bhktlxstrw6bh" path="res://data/assets/p2_won.png" id="6_74xyp"]
 [ext_resource type="Texture2D" uid="uid://b3up801ttef47" path="res://data/assets/p1_won.png" id="7_mm4q0"]
@@ -18,43 +19,48 @@ shader = ExtResource("4_ccuut")
 size = Vector2(1280, 720)
 center_offset = Vector3(640, 360, 0)
 
-[node name="Vs Hana" type="Node2D"]
+[node name="Vs Hana" type="Node2D" unique_id=1469122099]
 script = ExtResource("1_rd226")
 
-[node name="GameBattle" type="AudioStreamPlayer" parent="."]
+[node name="GameBattle" type="AudioStreamPlayer" parent="." unique_id=255329618]
 stream = ExtResource("2_mfk66")
 volume_db = -5.0
 parameters/looping = true
 
-[node name="End" type="AudioStreamPlayer" parent="."]
+[node name="End" type="AudioStreamPlayer" parent="." unique_id=395357273]
 stream = ExtResource("3_54dh5")
 parameters/looping = true
 
-[node name="CRT" type="CanvasLayer" parent="."]
+[node name="Click" type="AudioStreamPlayer" parent="." unique_id=2062374732]
+unique_name_in_owner = true
+stream = ExtResource("4_mfk66")
+volume_db = 5.0
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="CRT"]
+[node name="CRT" type="CanvasLayer" parent="." unique_id=1233859445]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CRT" unique_id=318934877]
 material = SubResource("ShaderMaterial_oyohi")
 mesh = SubResource("QuadMesh_76spl")
 
-[node name="Screens" type="Node2D" parent="."]
+[node name="Screens" type="Node2D" parent="." unique_id=167899003]
 
-[node name="Menu" type="Sprite2D" parent="Screens"]
+[node name="Menu" type="Sprite2D" parent="Screens" unique_id=252140507]
 position = Vector2(640, 360)
 texture = ExtResource("5_guntq")
 
-[node name="Lose" type="Sprite2D" parent="Screens"]
+[node name="Lose" type="Sprite2D" parent="Screens" unique_id=824526261]
 position = Vector2(640, 360)
 texture = ExtResource("6_74xyp")
 
-[node name="Won" type="Sprite2D" parent="Screens"]
+[node name="Won" type="Sprite2D" parent="Screens" unique_id=1445961282]
 position = Vector2(640, 360)
 texture = ExtResource("7_mm4q0")
 
-[node name="Shadows" type="Sprite2D" parent="Screens"]
+[node name="Shadows" type="Sprite2D" parent="Screens" unique_id=2006684262]
 modulate = Color(1, 1, 1, 0.392157)
 position = Vector2(642, 360)
 texture = ExtResource("8_5on45")
 
-[node name="BallGame" parent="." instance=ExtResource("9_wt4qw")]
+[node name="BallGame" parent="." unique_id=2088686053 instance=ExtResource("9_wt4qw")]
 
-[node name="GameUI" parent="." instance=ExtResource("10_3jxnf")]
+[node name="GameUI" parent="." unique_id=660872975 instance=ExtResource("10_3jxnf")]

@@ -14,6 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://bui5ghb2oif2n" path="res://data/sfx/ball_game_win.ogg" id="12_4eq12"]
 [ext_resource type="AudioStream" uid="uid://7yjm0seohmej" path="res://data/sfx/player_point.ogg" id="13_xlaem"]
 [ext_resource type="AudioStream" uid="uid://dn21j1w0ei8s3" path="res://data/sfx/cpu_point.ogg" id="14_n23oj"]
+[ext_resource type="AudioStream" uid="uid://bifm1da2kye66" path="res://data/sfx/menu_selection_click.wav" id="15_khoye"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d26x6"]
 shader = ExtResource("2_lno2w")
@@ -295,6 +296,11 @@ volume_db = 15.0
 [node name="CPUPoint" type="AudioStreamPlayer2D" parent="." unique_id=690867615]
 stream = ExtResource("14_n23oj")
 volume_db = 15.0
+
+[node name="Click" type="AudioStreamPlayer" parent="." unique_id=725433132]
+unique_name_in_owner = true
+stream = ExtResource("15_khoye")
+volume_db = 5.0
 
 [node name="BallTimer" type="Timer" parent="." unique_id=88688853]
 wait_time = 2.1
