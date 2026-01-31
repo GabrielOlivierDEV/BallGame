@@ -6,7 +6,7 @@ It features characters from my webcomic [Haruka the Demon Boy](https://www.webto
 
 ## About the Project
 - Based on the tutorial **["Beginner Godot Tutorial - How to Make Pong with AI"](https://www.youtube.com/watch?v=Xq9AyhX8HUc)** by *Coding With Russ*  
-- Code commented with the help of **Visual Studio Code's Copilot** for clarity and learning purposes (since English is not my first language also.) 
+- Code commented with the help of **Visual Studio Code's Copilot** for clarity and learning purposes.
 
 
 ## How to Play / Run the Game
