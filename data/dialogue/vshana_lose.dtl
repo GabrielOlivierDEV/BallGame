@@ -1,6 +1,8 @@
 hana: "I WON! HAHAHAHAHAHAHA!"
 hana: "HAHAHA! YOU SUCK!"
 hana: "Looks like I get to choose the movie now!"
-haruka: "..."
+haruka: "Bruh."
 - Restart
+	[signal arg="click"]
 	[signal arg="reload"]
+[end_timeline]

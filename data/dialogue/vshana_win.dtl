@@ -10,8 +10,8 @@ haruka: "I just want to see how terrible it really is."
 haruka: "Still better than watching your silly k-dramas on repeat. Like that one with the--"
 hana: "Slow down! Don’t you dare trash-talk my husband!"
 haruka: "As if he even knew you…"
-hana: "…"
-haruka: "…"
+...
+...
 haruka: "Fine, whatever. Your pick."
 hana: "WHAT?!"
 hana: "Heh… you might regret this, Haru!"
@@ -20,3 +20,4 @@ haruka: "Probably…"
 [background arg="res://data/assets/black.jpg" fade="2.0"]
 [wait time="2.0"]
 [signal arg="reload"]
+[end_timeline]

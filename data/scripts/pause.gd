@@ -11,8 +11,6 @@ extends Control
 # ------------------------------
 @onready var pause_menu = $Menu/PauseMenu
 @onready var dialogic = Dialogic
-@onready var background = $Menu/Background
-@onready var pause_text = $Menu/Pause
 @onready var menu = $Menu
 @onready var display_version = $Menu/GameVersion
 @onready var press_pause = $PressPause
@@ -75,18 +73,10 @@ func _on_resume_pressed() -> void:
 	resume()
 
 func _on_restart_pressed() -> void:
-	get_tree().paused = false
-	
 	if click:
 		click.play()
 	
-	# End current Dialogic timeline if running
-	if dialogic:
-		dialogic.end_timeline()
-	
-	# Load screen transition before reloading the current scene
-	LoadingService.target_scene = get_tree().current_scene.scene_file_path
-	LoadingService.change_scene(LoadingService.target_scene)
+	LoadingService.reload_current_scene()
 
 func _on_quit_pressed() -> void:
 	get_tree().paused = false

@@ -5,17 +5,23 @@ hana: "Bet you're planning some glitchy trick to win."
 haruka: "Nah, I'm going clean."
 Select Mode.
 - Singleplayer
-	[signal arg="singleplayer"]
+	[signal arg="click"]
 	Select Difficulty.
 	- Easy Mode
+		[signal arg="click"]
 		[signal arg="easy"]
 	- Hard Mode
+		[signal arg="click"]
 		[signal arg="hard"]
 - Multiplayer
+	[signal arg="click"]
 	[signal arg="multiplayer"]
 Select Mode.
 - Finite
+	[signal arg="click"]
 	[signal arg="finite"]
 - Infinite
+	[signal arg="click"]
 	[signal arg="infinite"]
 [signal arg="start_game"]
+[end_timeline]

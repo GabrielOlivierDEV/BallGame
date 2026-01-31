@@ -37,35 +37,27 @@ func _on_dialogic_signal(argument: String):
 		game.visible = true
 	if argument == "reload":
 		# Reload the game
-		click.play()
 		call_deferred("reload")
 	if argument == "quit":
 		# Quits the game
-		click.play()
 		call_deferred("quit")
 	if argument == "infinite":
 		# Enable infinite mode
-		click.play()
 		infinite_mode = true
 	if argument == "finite":
 		# Disable infinite mode
-		click.play()
 		infinite_mode = false
 	if argument == "hard":
 		# Enable harder AI
-		click.play()
 		game.hard_mode = true
 	if argument == "easy":
 		# Disable harder AI
-		click.play()
 		game.hard_mode = false
 	if argument == "multiplayer":
 		# Enable multiplayer (makes CPU paddle playable)
-		click.play()
 		game.player_two()
-		
-	if argument == "singleplayer":
-		# Maintain the game in singleplayer mode.
+	if argument == "click":
+		# Play click sound
 		click.play()
 
 func win_lose():
@@ -93,7 +85,7 @@ func win_lose():
 
 func reload():
 	# Reload the current scene (used for restarting the match)
-	get_tree().reload_current_scene()
+	LoadingService.reload_current_scene()
 
 func quit():
 	# exits the game
