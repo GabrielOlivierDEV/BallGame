@@ -5,7 +5,7 @@ extends CanvasLayer
 # ------------------------------
 @onready var hint = $Hint
 @onready var loading = $Animation/HBoxContainer/Loading
-@onready var periods = $Animation/HBoxContainer/periods
+@onready var periods = $Animation/HBoxContainer/Periods
 
 # ------------------------------
 # VARIABLES

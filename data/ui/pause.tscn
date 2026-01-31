@@ -1,25 +1,15 @@
-[gd_scene load_steps=10 format=3 uid="uid://c1kfh74cau2tj"]
+[gd_scene format=3 uid="uid://c1kfh74cau2tj"]
 
 [ext_resource type="Script" uid="uid://cm7ju1j4opact" path="res://data/scripts/pause.gd" id="1_xksx4"]
 [ext_resource type="FontFile" uid="uid://dsjkyl3jkaamm" path="res://data/fonts/public_pixel.ttf" id="2_8gqci"]
 [ext_resource type="Texture2D" uid="uid://ctfiak8yse0hv" path="res://data/assets/pause_button.png" id="3_luuqn"]
 [ext_resource type="FontFile" uid="uid://d2i5eycr72nvi" path="res://data/fonts/pixelify_sans_regular.ttf" id="3_q86b6"]
-[ext_resource type="Shader" uid="uid://ce3kwe0580svo" path="res://data/shaders/checkboard.gdshader" id="4_ofr6j"]
 [ext_resource type="Texture2D" uid="uid://07u53bf6f5tx" path="res://data/assets/pause_pressed.png" id="5_3he8r"]
 [ext_resource type="AudioStream" uid="uid://dwwfc2srbl1xx" path="res://data/music/8bit_bossa.ogg" id="8_ofr6j"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_0o46q"]
-shader = ExtResource("4_ofr6j")
-shader_parameter/speed = 0.5
-shader_parameter/size = 25.0
-shader_parameter/skew_amount = 0.0
-shader_parameter/visibility = 0.5
-shader_parameter/color1 = Color(1, 1, 1, 1)
-shader_parameter/color2 = Color(0.7, 0.7, 0.7, 1)
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g74ew"]
 
-[node name="Pause" type="Control"]
+[node name="Pause" type="Control" unique_id=361930384]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 0
@@ -27,34 +17,18 @@ script = ExtResource("1_xksx4")
 normal_texture = ExtResource("3_luuqn")
 pressed_texture = ExtResource("5_3he8r")
 
-[node name="Menu" type="Control" parent="."]
-visible = false
+[node name="Menu" type="Control" parent="." unique_id=428211583]
 anchors_preset = 0
 
-[node name="background" type="Control" parent="Menu"]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="checkboard" type="ColorRect" parent="Menu/background"]
-z_index = -2
-material = SubResource("ShaderMaterial_0o46q")
-layout_mode = 0
-offset_left = -161.0
-offset_top = -170.0
-offset_right = 1574.0
-offset_bottom = 809.0
-rotation = 0.0937536
-
-[node name="Background" type="ColorRect" parent="Menu/background"]
-modulate = Color(1, 1, 1, 0.588235)
+[node name="Background" type="ColorRect" parent="Menu" unique_id=370769335]
+modulate = Color(1, 1, 1, 0.78431374)
 material = SubResource("ShaderMaterial_g74ew")
 layout_mode = 0
 offset_right = 1280.0
 offset_bottom = 720.0
 color = Color(0, 0, 0, 1)
 
-[node name="Pause" type="Label" parent="Menu"]
+[node name="Pause" type="Label" parent="Menu" unique_id=1442545304]
 layout_mode = 0
 offset_left = 403.0
 offset_top = 66.0
@@ -65,16 +39,16 @@ theme_override_fonts/font = ExtResource("2_8gqci")
 theme_override_font_sizes/font_size = 100
 text = "PAUSE"
 
-[node name="PauseMenu" type="VBoxContainer" parent="Menu"]
+[node name="PauseMenu" type="VBoxContainer" parent="Menu" unique_id=685198515]
 layout_mode = 0
 offset_left = 190.0
 offset_top = 307.0
 offset_right = 1111.0
 offset_bottom = 519.0
+theme_override_constants/separation = 15
 
-[node name="Resume" type="Button" parent="Menu/PauseMenu"]
+[node name="Resume" type="Button" parent="Menu/PauseMenu" unique_id=1312153524]
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(0.290196, 0.290196, 0.290196, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("3_q86b6")
@@ -82,7 +56,7 @@ theme_override_font_sizes/font_size = 50
 text = "Resume"
 metadata/_edit_lock_ = true
 
-[node name="Restart" type="Button" parent="Menu/PauseMenu"]
+[node name="Restart" type="Button" parent="Menu/PauseMenu" unique_id=426827974]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.290196, 0.290196, 0.290196, 1)
 theme_override_constants/outline_size = 15
@@ -91,7 +65,7 @@ theme_override_font_sizes/font_size = 50
 text = "Restart"
 metadata/_edit_lock_ = true
 
-[node name="Quit" type="Button" parent="Menu/PauseMenu"]
+[node name="Quit" type="Button" parent="Menu/PauseMenu" unique_id=77606119]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.290196, 0.290196, 0.290196, 1)
 theme_override_constants/outline_size = 15
@@ -100,7 +74,7 @@ theme_override_font_sizes/font_size = 50
 text = "Quit"
 metadata/_edit_lock_ = true
 
-[node name="GameVersion" type="Label" parent="Menu"]
+[node name="GameVersion" type="Label" parent="Menu" unique_id=1785170220]
 layout_mode = 0
 offset_left = 21.0
 offset_top = 664.0
@@ -108,7 +82,7 @@ offset_right = 623.0
 offset_bottom = 706.0
 theme_override_font_sizes/font_size = 30
 
-[node name="Press_Pause" type="Button" parent="."]
+[node name="PressPause" type="Button" parent="." unique_id=377142987]
 modulate = Color(1, 1, 1, 0.509804)
 layout_mode = 0
 offset_left = 42.0
@@ -118,7 +92,7 @@ offset_bottom = 128.0
 icon = ExtResource("3_luuqn")
 expand_icon = true
 
-[node name="Music" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1322154234]
 process_mode = 2
 stream = ExtResource("8_ofr6j")
 parameters/looping = true
@@ -126,4 +100,4 @@ parameters/looping = true
 [connection signal="pressed" from="Menu/PauseMenu/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="Menu/PauseMenu/Restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="Menu/PauseMenu/Quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="Press_Pause" to="." method="_on_press_pause_pressed"]
+[connection signal="pressed" from="PressPause" to="." method="_on_press_pause_pressed"]

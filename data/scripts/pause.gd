@@ -11,11 +11,11 @@ extends Control
 # ------------------------------
 @onready var pause_menu = $Menu/PauseMenu
 @onready var dialogic = Dialogic
-@onready var background = $Menu/background
+@onready var background = $Menu/Background
 @onready var pause_text = $Menu/Pause
 @onready var menu = $Menu
 @onready var display_version = $Menu/GameVersion
-@onready var press_pause = $Press_Pause
+@onready var press_pause = $PressPause
 @onready var music = $Music
 @onready var quit_button = $Menu/PauseMenu/Quit
 

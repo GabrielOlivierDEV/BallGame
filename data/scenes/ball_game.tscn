@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bp1iudr8g6t4q"]
+[gd_scene format=3 uid="uid://bp1iudr8g6t4q"]
 
 [ext_resource type="Script" uid="uid://c5ysccrgett43" path="res://data/scripts/ball_game.gd" id="1_5j1dg"]
 [ext_resource type="Texture2D" uid="uid://cajraihkhw4f8" path="res://data/assets/bg.png" id="1_yasd4"]
@@ -63,33 +63,33 @@ size = Vector2(33, 776)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v5wjk"]
 size = Vector2(2, 18)
 
-[node name="BallGame" type="Node2D"]
+[node name="BallGame" type="Node2D" unique_id=1916448582]
 script = ExtResource("1_5j1dg")
 
-[node name="Glitch" type="CanvasLayer" parent="."]
+[node name="Glitch" type="CanvasLayer" parent="." unique_id=797193844]
 visible = false
 
-[node name="ColorRect" type="ColorRect" parent="Glitch"]
+[node name="ColorRect" type="ColorRect" parent="Glitch" unique_id=896486]
 modulate = Color(0, 0, 0, 0.635294)
 offset_right = 1280.0
 offset_bottom = 720.0
 color = Color(0.412152, 0.412152, 0.412152, 1)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Glitch"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Glitch" unique_id=846228646]
 material = SubResource("ShaderMaterial_d26x6")
 mesh = SubResource("QuadMesh_kg2qg")
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="." unique_id=976655285]
 texture = ExtResource("1_yasd4")
 centered = false
 metadata/_edit_lock_ = true
 
-[node name="Ball" type="CharacterBody2D" parent="." groups=["ball"]]
+[node name="Ball" type="CharacterBody2D" parent="." unique_id=329795102 groups=["ball"]]
 position = Vector2(640, 360)
 collision_mask = 3
 script = ExtResource("4_ikv3j")
 
-[node name="ColorRect2" type="ColorRect" parent="Ball"]
+[node name="ColorRect2" type="ColorRect" parent="Ball" unique_id=554601614]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -102,7 +102,7 @@ offset_bottom = 17.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect3" type="ColorRect" parent="Ball"]
+[node name="ColorRect3" type="ColorRect" parent="Ball" unique_id=226215279]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -115,7 +115,7 @@ offset_bottom = 9.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="Ball"]
+[node name="ColorRect" type="ColorRect" parent="Ball" unique_id=1035078359]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -128,12 +128,12 @@ offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball" unique_id=1804415222]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_3q8ny")
 metadata/_edit_lock_ = true
 
-[node name="Press" type="Label" parent="Ball"]
+[node name="Press" type="Label" parent="Ball" unique_id=617634917]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -150,48 +150,48 @@ theme_override_font_sizes/font_size = 50
 text = "Press E to START"
 horizontal_alignment = 1
 
-[node name="CPU" type="CharacterBody2D" parent="."]
+[node name="CPU" type="CharacterBody2D" parent="." unique_id=531344423]
 position = Vector2(1123, 360)
 script = ExtResource("7_7j71k")
 
-[node name="Sprite2D" type="Sprite2D" parent="CPU"]
+[node name="Sprite2D" type="Sprite2D" parent="CPU" unique_id=205626341]
 position = Vector2(20, 0)
 scale = Vector2(0.367491, 0.409395)
 texture = ExtResource("8_boya4")
 flip_h = true
 metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CPU"]
+[node name="TorsoCollision" type="CollisionShape2D" parent="CPU" unique_id=511358490]
 position = Vector2(19.5, 41.5)
 shape = SubResource("RectangleShape2D_scpg0")
 metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="CPU"]
+[node name="HeadCollision" type="CollisionShape2D" parent="CPU" unique_id=1428323809]
 position = Vector2(19.5, -43)
 scale = Vector2(0.367491, 0.409395)
 shape = SubResource("RectangleShape2D_j7cwk")
 metadata/_edit_lock_ = true
 
-[node name="Player" type="CharacterBody2D" parent="." groups=["player"]]
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1077587751 groups=["player"]]
 position = Vector2(116, 360)
 script = ExtResource("3_m8rgr")
 
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=849079678]
 position = Vector2(21, 5.36442e-07)
 scale = Vector2(0.367491, 0.409395)
 texture = ExtResource("8_boya4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+[node name="TorsoCollision" type="CollisionShape2D" parent="Player" unique_id=395757939]
 position = Vector2(20.5, 41)
 shape = SubResource("RectangleShape2D_scpg0")
 metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player"]
+[node name="HeadCollision" type="CollisionShape2D" parent="Player" unique_id=1349188755]
 position = Vector2(20.75, -43.25)
 scale = Vector2(0.367491, 0.409395)
 shape = SubResource("RectangleShape2D_j7cwk")
 
-[node name="Cheat" type="Label" parent="Player"]
+[node name="Cheat" type="Label" parent="Player" unique_id=456253773]
 visible = false
 offset_left = -42.0
 offset_top = -317.0
@@ -215,92 +215,93 @@ LEFT + RIGHT
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="ScoreRight" type="Area2D" parent="."]
+[node name="ScoreRight" type="Area2D" parent="." unique_id=2071562670]
 
-[node name="Up" type="CollisionShape2D" parent="ScoreRight"]
+[node name="Up" type="CollisionShape2D" parent="ScoreRight" unique_id=2021364829]
 position = Vector2(1199.88, -19.5)
 shape = SubResource("RectangleShape2D_qnthr")
 
-[node name="Right" type="CollisionShape2D" parent="ScoreRight"]
+[node name="Right" type="CollisionShape2D" parent="ScoreRight" unique_id=44086884]
 position = Vector2(1287, 360)
 shape = SubResource("RectangleShape2D_2spne")
 
-[node name="Down" type="CollisionShape2D" parent="ScoreRight"]
+[node name="Down" type="CollisionShape2D" parent="ScoreRight" unique_id=1487320918]
 position = Vector2(1199.88, 739)
 shape = SubResource("RectangleShape2D_iaakd")
 
-[node name="Spawn" type="Marker2D" parent="ScoreRight"]
+[node name="Spawn" type="Marker2D" parent="ScoreRight" unique_id=657790982]
 position = Vector2(137, 317)
 
-[node name="ScoreLeft" type="Area2D" parent="."]
+[node name="ScoreLeft" type="Area2D" parent="." unique_id=555557006]
 position = Vector2(872, 446)
 metadata/_edit_lock_ = true
 
-[node name="Left" type="CollisionShape2D" parent="ScoreLeft"]
+[node name="Left" type="CollisionShape2D" parent="ScoreLeft" unique_id=1739777924]
 position = Vector2(-878.5, -86)
 shape = SubResource("RectangleShape2D_dppnd")
 
-[node name="Down" type="CollisionShape2D" parent="ScoreLeft"]
+[node name="Down" type="CollisionShape2D" parent="ScoreLeft" unique_id=1185399774]
 position = Vector2(-791.5, 293)
 shape = SubResource("RectangleShape2D_xexbj")
 
-[node name="Up" type="CollisionShape2D" parent="ScoreLeft"]
+[node name="Up" type="CollisionShape2D" parent="ScoreLeft" unique_id=723875845]
 position = Vector2(-791.875, -465.5)
 shape = SubResource("RectangleShape2D_8r8ds")
 
-[node name="Borders" type="StaticBody2D" parent="."]
+[node name="Borders" type="StaticBody2D" parent="." unique_id=1449977885]
 collision_layer = 2
 
-[node name="up" type="CollisionShape2D" parent="Borders"]
+[node name="Up" type="CollisionShape2D" parent="Borders" unique_id=821984101]
 position = Vector2(640.25, -28)
 shape = SubResource("RectangleShape2D_d0ard")
 
-[node name="down" type="CollisionShape2D" parent="Borders"]
+[node name="Down" type="CollisionShape2D" parent="Borders" unique_id=464072391]
 position = Vector2(640, 748)
 shape = SubResource("RectangleShape2D_d0ard")
 
-[node name="left" type="CollisionShape2D" parent="Borders"]
+[node name="Left" type="CollisionShape2D" parent="Borders" unique_id=909279164]
 position = Vector2(-16.5, 388)
 shape = SubResource("RectangleShape2D_uf15b")
 
-[node name="right" type="CollisionShape2D" parent="Borders"]
+[node name="Right" type="CollisionShape2D" parent="Borders" unique_id=1284613677]
 position = Vector2(1297, 388)
 shape = SubResource("RectangleShape2D_uf15b")
 
-[node name="trave_left_up" type="CollisionShape2D" parent="Borders"]
+[node name="TraveLeftUp" type="CollisionShape2D" parent="Borders" unique_id=2127077943]
 position = Vector2(161, 8)
 shape = SubResource("RectangleShape2D_v5wjk")
 
-[node name="trave_left_down" type="CollisionShape2D" parent="Borders"]
+[node name="TraveLeftDown" type="CollisionShape2D" parent="Borders" unique_id=1692173673]
 position = Vector2(162, 711)
 shape = SubResource("RectangleShape2D_v5wjk")
 
-[node name="trave_right_up" type="CollisionShape2D" parent="Borders"]
+[node name="TraveRightUp" type="CollisionShape2D" parent="Borders" unique_id=932944008]
 position = Vector2(1119, 8)
 shape = SubResource("RectangleShape2D_v5wjk")
 
-[node name="trave_right_down" type="CollisionShape2D" parent="Borders"]
+[node name="TraveRightDown" type="CollisionShape2D" parent="Borders" unique_id=1524623642]
 position = Vector2(1119, 711)
 shape = SubResource("RectangleShape2D_v5wjk")
 
-[node name="win" type="AudioStreamPlayer2D" parent="."]
+[node name="Win" type="AudioStreamPlayer2D" parent="." unique_id=37065992]
+position = Vector2(0, 1)
 stream = ExtResource("12_4eq12")
 volume_db = 15.0
 
-[node name="player_point" type="AudioStreamPlayer2D" parent="."]
+[node name="PlayerPoint" type="AudioStreamPlayer2D" parent="." unique_id=770704023]
 stream = ExtResource("13_xlaem")
 volume_db = 15.0
 
-[node name="cpu_point" type="AudioStreamPlayer2D" parent="."]
+[node name="CPUPoint" type="AudioStreamPlayer2D" parent="." unique_id=690867615]
 stream = ExtResource("14_n23oj")
 volume_db = 15.0
 
-[node name="BallTimer" type="Timer" parent="."]
+[node name="BallTimer" type="Timer" parent="." unique_id=88688853]
 wait_time = 2.1
 one_shot = true
 autostart = true
 
-[node name="CPUScore" type="HBoxContainer" parent="."]
+[node name="CPUScore" type="HBoxContainer" parent="." unique_id=303744566]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -313,20 +314,20 @@ offset_bottom = 137.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HanaIcon" type="Button" parent="CPUScore"]
+[node name="HanaIcon" type="Button" parent="CPUScore" unique_id=1012482023]
 layout_mode = 2
 icon = ExtResource("3_it05p")
 flat = true
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="CPUScore"]
+[node name="Label" type="Label" parent="CPUScore" unique_id=926483945]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("9_ruxix")
 theme_override_font_sizes/font_size = 80
 text = "0"
 metadata/_edit_lock_ = true
 
-[node name="PlayerScore" type="HBoxContainer" parent="."]
+[node name="PlayerScore" type="HBoxContainer" parent="." unique_id=583068330]
 layout_direction = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -340,13 +341,13 @@ offset_bottom = 137.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HarukaIcon" type="Button" parent="PlayerScore"]
+[node name="HarukaIcon" type="Button" parent="PlayerScore" unique_id=553416668]
 layout_mode = 2
 icon = ExtResource("3_jwuxe")
 flat = true
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="PlayerScore"]
+[node name="Label" type="Label" parent="PlayerScore" unique_id=1060241883]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("9_ruxix")
 theme_override_font_sizes/font_size = 80

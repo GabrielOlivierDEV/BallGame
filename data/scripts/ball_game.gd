@@ -24,12 +24,12 @@ const PADDLE_SPEED: int = 500
 @onready var cpu_score = $CPUScore/Label
 @onready var score_right = $ScoreRight
 @onready var score_left = $ScoreLeft
-@onready var player_point = $player_point
-@onready var cpu_point = $cpu_point
+@onready var player_point = $PlayerPoint
+@onready var cpu_point = $CPUPoint
 @onready var cheat = $Player/Cheat
 
 # Other game elements
-@onready var win = $win
+@onready var win = $Win
 
 # Debug configuration
 @export var debug_enabled: bool = false  # Set 'false' to disable debug

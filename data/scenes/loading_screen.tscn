@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dl7tj6y2pdhc4"]
+[gd_scene format=3 uid="uid://dl7tj6y2pdhc4"]
 
 [ext_resource type="Script" uid="uid://26mqrg7q4rmw" path="res://data/scripts/loading_screen.gd" id="1_7jpe2"]
 [ext_resource type="Shader" uid="uid://68yudi7bsh56" path="res://data/shaders/crt_effect.gdshader" id="3_s683f"]
@@ -35,10 +35,10 @@ shader = ExtResource("3_s683f")
 size = Vector2(1280, 720)
 center_offset = Vector3(640, 360, 0)
 
-[node name="Loading" type="CanvasLayer"]
+[node name="Loading" type="CanvasLayer" unique_id=746344842]
 script = ExtResource("1_7jpe2")
 
-[node name="Blackground" type="ColorRect" parent="."]
+[node name="Blackground" type="ColorRect" parent="." unique_id=491571911]
 modulate = Color(1, 1, 1, 0.843137)
 anchors_preset = 15
 anchor_right = 1.0
@@ -47,10 +47,10 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=936823195]
 wait_time = 2.0
 
-[node name="Hint" type="Label" parent="."]
+[node name="Hint" type="Label" parent="." unique_id=966485986]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -69,13 +69,13 @@ text = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="Animation" type="Control" parent="."]
+[node name="Animation" type="Control" parent="." unique_id=630641497]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Animation"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Animation" unique_id=1268849133]
 layout_mode = 0
 offset_left = 868.0
 offset_top = 598.0
@@ -83,26 +83,26 @@ offset_right = 1172.0
 offset_bottom = 681.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Loading" type="AnimatedSprite2D" parent="Animation/HBoxContainer"]
+[node name="Loading" type="AnimatedSprite2D" parent="Animation/HBoxContainer" unique_id=666248404]
 position = Vector2(-69, 42)
 scale = Vector2(0.163281, 0.163281)
 sprite_frames = SubResource("SpriteFrames_5iwjd")
 frame_progress = 0.371112
 
-[node name="Loading_Text" type="Label" parent="Animation/HBoxContainer"]
+[node name="LoadingText" type="Label" parent="Animation/HBoxContainer" unique_id=1078761259]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("6_8a2qb")
 theme_override_font_sizes/font_size = 30
 text = "Loading"
 
-[node name="periods" type="Label" parent="Animation/HBoxContainer"]
+[node name="Periods" type="Label" parent="Animation/HBoxContainer" unique_id=1406264322]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("6_8a2qb")
 theme_override_font_sizes/font_size = 30
 
-[node name="CRT" type="CanvasLayer" parent="."]
+[node name="CRT" type="CanvasLayer" parent="." unique_id=128785169]
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="CRT"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CRT" unique_id=446372607]
 material = SubResource("ShaderMaterial_1gwab")
 mesh = SubResource("QuadMesh_ok80k")
 metadata/_edit_lock_ = true

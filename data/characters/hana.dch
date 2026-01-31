@@ -4,9 +4,22 @@
 &"_translation_id": "",
 &"color": Color(1, 0.647059, 0, 1),
 &"custom_info": {
-"sound_mood_default": "",
-"sound_moods": {},
-"style": ""
+"prefix": "",
+"sound_mood_default": "default",
+"sound_moods": {
+"default": {
+"mode": 2,
+"name": "default",
+"pitch_base": 0.9,
+"pitch_variance": -0.1,
+"skip_characters": 0.0,
+"sound_path": "res://data/voices/hana_beeps.ogg",
+"volume_base": 0.0,
+"volume_variance": 0.0
+}
+},
+"style": "",
+"suffix": ""
 },
 &"default_portrait": "",
 &"description": "A young fox-woman and Haruka's older sister. She's a mechanic genius and a bit grumpy.",
